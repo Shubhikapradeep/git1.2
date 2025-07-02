@@ -1,0 +1,2 @@
+Quantum computers operate at incredibly low temperatures, often near absolute zero (0.02 Kelvin or -460°Fahrenheit!), to minimize thermal noise and stabilize qubits. 
+Quantum computers provide exponential speed up over basic super computers.
