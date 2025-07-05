@@ -1,3 +1,3 @@
 # git1.2
 Git exercise 1
-Change 
+GHP1.1/About me site
