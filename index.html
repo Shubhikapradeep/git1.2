@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shubhika Pradeep - About Me</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <nav class="navbar">
+        <ul>
+            <li><button onclick="scrollToSection('about')">About</button></li>
+            <li><button onclick="scrollToSection('journey')">Journey</button></li>
+            <li><button onclick="scrollToSection('story-carousel')">Gallery</button></li>
+            <li><button onclick="scrollToSection('interests')">Interests</button></li>
+            <li><button onclick="scrollToSection('fun-facts')">Fun Facts</button></li>
+            <li><button onclick="scrollToSection('contact')">Contact</button></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Hi, I'm Shubhika Pradeep! My friends call me Bee 🐝</h1>
+
+        <section class="bio" id="about">
+            <h2>About Me</h2>
+            <p>
+                I’m a CSE undergrad who deeply believes code should help people. I care about tech that helps people —
+                whether it's a mental health diagnostic system, a sustainable commute app, or a focus tool for ADHD.
+                I live in my headphones, sketch ideas in my notes app, and believe code should feel like care.
+            </p>
+            <img src="me.png" alt="Photo of me" class="profile-pic" /> </section>
+
+        <section class="journey" id="journey">
+            <h2>My KWK & Coding Journey</h2>
+            <p>
+                I've been part of KWK's coding camps twice — Web Dev in June 2023 and Data Science in June 2024.
+                These experiences shaped how I build. I started with HTML, CSS, JavaScript, and Python, and now dive deep into C, Swift and ML frameworks.
+                I'm part of the AIML club at PESU and love combining tech, creativity, and empathy in everything I build.
+            </p>
+        </section>
+
+        <section id="story-carousel" class="carousel-section">
+            <h2>My Hair Dye, Culture & Concert Diary</h2>
+            <div class="carousel">
+                <button id="prevSlideBtn" class="carousel-btn">←</button>
+                <div class="carousel-slide">
+                    <img id="carouselImage" src="" alt="Slide" />
+                    <p id="carouselCaption" class="carousel-caption"></p>
+                </div>
+                <button id="nextSlideBtn" class="carousel-btn">→</button>
+            </div>
+        </section>
+
+        <section class="interests" id="interests">
+            <h2>Things I'm Passionate About</h2>
+            <ul>
+                <li><a href="https://github.com/Shubhikapradeep" target="_blank">My GitHub Projects 💻</a></li>
+                <li><a href="https://quanad.pes.edu" target="_blank">QuNAD Lab — where I'm part of undergraduate research projects in Quantum Physics. 🧪</a></li>
+                <li><a href="https://home.cern" target="_blank">CERN — where science becomes philosophy 🔬</a></li>
+                <li><a href="https://www.linkedin.com/in/shubhika-pradeep" target="_blank">My LinkedIn — let's connect 🤝</a></li>
+            </ul>
+        </section>
+
+        <section class="fun-facts" id="fun-facts">
+            <h2>Fun Facts About Me!</h2>
+            <ul id="funFactsList">
+                </ul>
+        </section>
+        <section class="game-section" id="brick-breaker-game">
+            <h2>Break the Bricks, Reveal the Art!</h2>
+            <div class="game-container">
+                <canvas id="gameCanvas" width="800" height="600"></canvas>
+                <div id="gameOverlay">
+                    <button id="startGameBtn">Start Game</button>
+                    <p id="gameMessage"></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="social-contact" id="contact">
+            <h2>Connect With Me</h2>
+            <div class="social-buttons">
+                <a href="https://www.linkedin.com/in/shubhika-pradeep" target="_blank" class="social-button linkedin">
+                    <i class="fab fa-linkedin-in"></i> LinkedIn
+                </a>
+                <a href="https://github.com/Shubhikapradeep" target="_blank" class="social-button github">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="https://open.spotify.com/user/nthp8cxmtdjuocza9rncwm0qk?si=b4b3d877c2d04197" target="_blank" class="social-button spotify">
+                    <i class="fab fa-spotify"></i> Spotify
+                </a>
+            </div>
+
+            <h3>Or Send Me a Message:</h3>
+            <form action="https://formspree.io/f/mzzgqydk" method="POST" class="contact-form">
+                <label>
+                    Your email:
+                    <input type="email" name="email" required>
+                </label>
+                <label>
+                    Your message:
+                    <textarea name="message" required></textarea>
+                </label>
+                <button type="submit">Send Message</button>
+            </form>
+
+            <div class="spotify-embed">
+                <h3>Currently Listening To:</h3>
+               <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5xQ9S1Jn5VQ7flfR6P0gUm?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
