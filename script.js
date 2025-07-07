@@ -288,6 +288,15 @@ document.addEventListener('DOMContentLoaded', () => {
     populateFunFacts();
     updateCarousel();
 
+    const prevBtn = document.getElementById('prevSlideBtn');
+    const nextBtn = document.getElementById('nextSlideBtn');
+
+    if (prevBtn) {
+        prevBtn.addEventListener('click', prevSlide);
+    }
+    if (nextBtn) {
+        nextBtn.addEventListener('click', nextSlide);
+    }
     if (canvas && ctx && startGameBtn && gameOverlay && gameMessage) {
         const gameContainer = canvas.parentElement;
         if (gameContainer) {
@@ -297,10 +306,9 @@ document.addEventListener('DOMContentLoaded', () => {
             ball.x = canvas.width / 2;
             ball.y = canvas.height - paddle.height - ball.radius;
         }
-        createBricks(); 
+        createBricks();
         document.addEventListener('mousemove', mouseMoveHandler);
         startGameBtn.addEventListener('click', startGame);
-
         draw();
     } else {
         console.error("Game elements (canvas, buttons, etc.) not found in DOM.");
