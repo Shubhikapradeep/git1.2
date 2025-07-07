@@ -297,7 +297,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ball.x = canvas.width / 2;
             ball.y = canvas.height - paddle.height - ball.radius;
         }
-
+        createBricks(); 
         document.addEventListener('mousemove', mouseMoveHandler);
         startGameBtn.addEventListener('click', startGame);
 
