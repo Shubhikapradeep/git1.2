@@ -314,3 +314,33 @@ document.addEventListener('DOMContentLoaded', () => {
         console.error("Game elements (canvas, buttons, etc.) not found in DOM.");
     }
 });
+const bee = document.getElementById('bee-pet');
+
+document.addEventListener('mousemove', (e) => {
+  const mouseX = e.clientX;
+  const mouseY = e.clientY;
+
+  if (bee) {
+    bee.style.left = mouseX + 'px';
+    bee.style.top = mouseY + 'px';
+  }
+
+  const trail = document.createElement('div');
+  trail.className = 'bee-trail';
+  trail.textContent = '✨'; 
+  trail.style.left = mouseX + 'px';
+  trail.style.top = mouseY + 'px';
+  
+  document.body.appendChild(trail);
+
+  setTimeout(() => {
+    trail.style.opacity = 0;
+  }, 50);
+
+  setTimeout(() => {
+    trail.remove();
+  }, 700);
+});
+
+
+

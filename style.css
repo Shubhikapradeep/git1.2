@@ -170,48 +170,46 @@ h2 {
 }
 
 .social-button {
-  background-color: var(--link-color); /* Purple background */
-  color: var(--button-text-light); /* White text for contrast */
+  background-color: var(--link-color); 
+  color: var(--button-text-light); 
   padding: 10px 20px;
   border-radius: 25px;
   text-decoration: none;
   font-weight: bold;
   display: flex;
   align-items: center;
-  gap: 8px; /* Space between icon and text */
+  gap: 8px; 
   transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .social-button:hover {
-  background-color: var(--hover-link); /* Muted red on hover */
+  background-color: var(--hover-link); 
   transform: translateY(-2px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
-
-/* Ensure Font Awesome icons are visible */
 .social-button i {
   font-size: 1.2em;
-  color: var(--button-text-light); /* Explicitly white for icons */
+  color: var(--button-text-light);
 }
 
 .contact-form {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  max-width: 500px; /* Constrain form width */
+  max-width: 500px; 
   margin: 20px auto;
   padding: 20px;
   border: 1px solid var(--border-color);
   border-radius: 8px;
-  background-color: var(--main-section-bg); /* Match main section background */
+  background-color: var(--main-section-bg); 
 }
 
 .contact-form label {
   display: flex;
   flex-direction: column;
   font-weight: bold;
-  color: var(--primary-text); /* Dark text for labels */
+  color: var(--primary-text); 
 }
 
 .contact-form input[type="email"],
@@ -223,33 +221,41 @@ h2 {
   border-radius: 5px;
   background-color: var(--input-bg);
   color: var(--input-text);
-  box-sizing: border-box; /* Include padding in width */
+  box-sizing: border-box;
 }
 
 .contact-form textarea {
-  resize: vertical; /* Allow vertical resizing */
+  resize: vertical; 
   min-height: 100px;
 }
 
 .contact-form button[type="submit"] {
-  background-color: var(--button-border); /* Purple background */
-  color: var(--button-text-light); /* White text */
+  background-color: var(--button-border);
+  color: var(--button-text-light);
   border: 2px solid var(--button-border);
   padding: 10px 20px;
   border-radius: 25px;
   cursor: pointer;
   font-size: 1rem;
   font-weight: bold;
-  margin-top: 10px; /* Space above the button */
+  margin-top: 10px;
   transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
-  align-self: center; /* Center the button in the column layout */
+  align-self: center;
 }
 
 .contact-form button[type="submit"]:hover {
-  background-color: var(--button-hover-bg); /* Muted red on hover */
+  background-color: var(--button-hover-bg); 
   color: var(--button-hover-text);
   transform: translateY(-2px);
 }
+#bee-pet {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  font-size: 1.4rem;
+  transition: transform 0.08s linear;
+}
+
 
 .spotify-embed {
   margin-top: 3rem;
@@ -359,3 +365,55 @@ h2 {
         font-size: 1.2rem;
     }
 }}
+.bee-trail {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.bee-trail::after {
+  content: '🐝';
+  font-size: 24px;
+  animation: buzz 6s infinite linear;
+  position: absolute;
+}
+
+@keyframes buzz {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  10% {
+    transform: translate(50px, 30px) rotate(45deg);
+  }
+  20% {
+    transform: translate(100px, -20px) rotate(90deg);
+  }
+  30% {
+    transform: translate(150px, 40px) rotate(135deg);
+  }
+  40% {
+    transform: translate(200px, 10px) rotate(180deg);
+  }
+  50% {
+    transform: translate(250px, -30px) rotate(225deg);
+  }
+  60% {
+    transform: translate(300px, 20px) rotate(270deg);
+  }
+  70% {
+    transform: translate(350px, -10px) rotate(315deg);
+  }
+  80% {
+    transform: translate(400px, 0) rotate(360deg);
+  }
+  90% {
+    transform: translate(350px, 40px) rotate(405deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(450deg);
+  }
+}
