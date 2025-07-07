@@ -25,6 +25,8 @@
 }
 
 body {
+  cursor: url('https://abs.twimg.com/emoji/v2/72x72/1f41d.png'), auto;
+
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
   padding: 0;
