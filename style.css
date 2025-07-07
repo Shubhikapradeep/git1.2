@@ -188,6 +188,7 @@ h2 {
   transform: translateY(-2px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
+
 .social-button i {
   font-size: 1.2em;
   color: var(--button-text-light);
@@ -365,22 +366,25 @@ h2 {
         font-size: 1.2rem;
     }
 }}
-.bee-trail {
+
+#bee-pet {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 0;
-  z-index: 9999;
   pointer-events: none;
+  z-index: 9999;
+  font-size: 20px;
+  transform: translate(-50%, -50%);
 }
 
-.bee-trail::after {
-  content: '🐝';
-  font-size: 24px;
-  animation: buzz 6s infinite linear;
-  position: absolute;
+.bee-trail {
+  position: fixed;
+  pointer-events: none;
+  font-size: 16px;
+  opacity: 1;
+  transition: opacity 0.5s ease-out;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
 }
+
 
 @keyframes buzz {
   0% {
